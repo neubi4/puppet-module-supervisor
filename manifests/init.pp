@@ -205,7 +205,7 @@ class supervisor(
   service { $supervisor::params::system_service:
     ensure     => $service_ensure_real,
     enable     => $service_enable,
-    hasrestart => true,
+    hasrestart => false,
     require    => File[$supervisor::params::conf_file],
   }
 }
